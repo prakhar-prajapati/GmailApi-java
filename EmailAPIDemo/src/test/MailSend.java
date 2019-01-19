@@ -55,9 +55,9 @@ public class MailSend extends HttpServlet {
 	public void sendMail(String to,String sub,String msg)
 	{
 	
-		String from = "nitingour999@gmail.com";
-	    final String username =  "nitingour999@gmail.com";//change accordingly
-	    final String password = "YYYYYYYYYYYY";//change accordingly
+		String from = "project.chayan@gmail.com";
+	    final String username =  "project.chayan@gmail.com";//change accordingly
+	    final String password = "Chayan1234";//change accordingly
 
 	    // Assuming you are sending email through relay.jangosmtp.net
 	    String host = "smtp.gmail.com";
@@ -91,7 +91,8 @@ public class MailSend extends HttpServlet {
 	       message.setSubject(sub);
 
 	       // Now set the actual message
-	       message.setText(msg);
+	       //message.setContent(msg,Text/HTML);
+	       message.setContent(msg,"text/html");
 
 	       // Send message
 	       
